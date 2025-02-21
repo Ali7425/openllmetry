@@ -1,6 +1,6 @@
 [tool.coverage.run]
 branch = true
-source = ["opentelemetry/instrumentation/azure_search"]
+source = ["opentelemetry/instrumentation/azure-search"]
 
 [tool.coverage.report]
 exclude_lines = ["if TYPE_CHECKING:"]
@@ -10,13 +10,13 @@ show_missing = true
 name = "opentelemetry-instrumentation-azure-search"
 version = "0.1.0"
 description = "OpenTelemetry instrumentation for Azure AI Search"
-authors = [Ali Al-Bajati ali.oa.albajati@gmail.com]
+authors = ["Ali Al-Bajati <ali.oa.albajati@gmail.com>"]
 repository = "https://github.com/traceloop/openllmetry/tree/main/packages/opentelemetry-instrumentation-azure-search"
 license = "Apache-2.0"
 readme = "README.md"
 
 [[tool.poetry.packages]]
-include = "opentelemetry/instrumentation/Azure_Ai_Search"
+include = "opentelemetry/instrumentation/azure-search"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4"
@@ -47,5 +47,4 @@ build-backend = "poetry.core.masonry.api"
 instruments = ["azure-search-documents"]
 
 [tool.poetry.plugins."opentelemetry_instrumentor"]
-azure_search = "opentelemetry.instrumentation.azure_search:AzureSearchInstrumentor"
-
+azure-search = "opentelemetry.instrumentation.azure-search:AzureSearchInstrumentor"
