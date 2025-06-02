@@ -47,4 +47,4 @@ build-backend = "poetry.core.masonry.api"
 instruments = ["azure-search-documents"]
 
 [tool.poetry.plugins."opentelemetry_instrumentor"]
-azure-search = "opentelemetry.instrumentation.azure-search:AzureSearchInstrumentor"
+azure-search = "opentelemetry.instrumentation.azure-search:AzureSearchInstrumentor"poetry lock --no-update
