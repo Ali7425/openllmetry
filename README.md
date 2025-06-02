@@ -102,6 +102,7 @@ Traceloop.init(disable_batch=True)
 - ✅ [KloudMate](https://www.traceloop.com/docs/openllmetry/integrations/kloudmate)
 - ✅ [New Relic](https://www.traceloop.com/docs/openllmetry/integrations/newrelic)
 - ✅ [OpenTelemetry Collector](https://www.traceloop.com/docs/openllmetry/integrations/otel-collector)
+- ✅ [Oracle Cloud](https://www.traceloop.com/docs/openllmetry/integrations/oraclecloud)
 - ✅ [Service Now Cloud Observability](https://www.traceloop.com/docs/openllmetry/integrations/service-now)
 - ✅ [SigNoz](https://www.traceloop.com/docs/openllmetry/integrations/signoz)
 - ✅ [Sentry](https://www.traceloop.com/docs/openllmetry/integrations/sentry)
@@ -142,10 +143,15 @@ OpenLLMetry can instrument everything that [OpenTelemetry already instruments](h
 ### Frameworks
 
 - ✅ [LangChain](https://python.langchain.com/docs/introduction/)
+- ✅ [LangGraph](https://langchain-ai.github.io/langgraph/concepts/why-langgraph/)
 - ✅ [LlamaIndex](https://docs.llamaindex.ai/en/stable/module_guides/observability/observability.html#openllmetry)
 - ✅ [Haystack](https://haystack.deepset.ai/integrations/traceloop)
 - ✅ [LiteLLM](https://docs.litellm.ai/docs/observability/opentelemetry_integration)
 - ✅ [CrewAI](https://docs.crewai.com/introduction)
+
+### Protocol
+
+- ✅ [MCP](https://modelcontextprotocol.io/)
 
 ## 🔎 Telemetry
 

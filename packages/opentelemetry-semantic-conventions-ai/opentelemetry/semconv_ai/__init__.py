@@ -8,9 +8,6 @@ class Meters:
     LLM_TOKEN_USAGE = "gen_ai.client.token.usage"
     LLM_OPERATION_DURATION = "gen_ai.client.operation.duration"
     LLM_COMPLETIONS_EXCEPTIONS = "llm.openai.chat_completions.exceptions"
-    LLM_STREAMING_TIME_TO_FIRST_TOKEN = (
-        "llm.openai.chat_completions.streaming_time_to_first_token"
-    )
     LLM_STREAMING_TIME_TO_GENERATE = (
         "llm.openai.chat_completions.streaming_time_to_generate"
     )
@@ -162,9 +159,19 @@ class SpanAttributes:
     MILVUS_DELETE_FILTER = "db.milvus.delete.filter"
     MILVUS_DELETE_IDS_COUNT = "db.milvus.delete.ids_count"
     MILVUS_DELETE_PARTITION_NAME = "db.milvus.delete.partition_name"
-    MILVUS_DELETE_TIMEOUT_COUNT = "db.milvus.delete.timeout_count"
+    MILVUS_DELETE_TIMEOUT = "db.milvus.delete.timeout"
     MILVUS_GET_COLLECTION_NAME = "db.milvus.get.collection_name"
     MILVUS_GET_PARTITION_NAMES_COUNT = "db.milvus.get.partition_names_count"
+    MILVUS_GET_IDS_COUNT = "db.milvus.get.ids_count"
+    MILVUS_GET_OUTPUT_FIELDS_COUNT = "db.milvus.get.output_fields_count"
+    MILVUS_GET_TIMEOUT = "db.milvus.get.timeout"
+    MILVUS_CREATE_COLLECTION_NAME = "db.milvus.create_collection.collection_name"
+    MILVUS_CREATE_COLLECTION_DIMENSION = "db.milvus.create_collection.dimension"
+    MILVUS_CREATE_COLLECTION_PRIMARY_FIELD = "db.milvus.create_collection.primary_field"
+    MILVUS_CREATE_COLLECTION_METRIC_TYPE = "db.milvus.create_collection.metric_type"
+    MILVUS_CREATE_COLLECTION_TIMEOUT = "db.milvus.create_collection.timeout"
+    MILVUS_CREATE_COLLECTION_ID_TYPE = "db.milvus.create_collection.id_type"
+    MILVUS_CREATE_COLLECTION_VECTOR_FIELD = "db.milvus.create_collection.vector_field"
     MILVUS_INSERT_COLLECTION_NAME = "db.milvus.insert.collection_name"
     MILVUS_INSERT_DATA_COUNT = "db.milvus.insert.data_count"
     MILVUS_INSERT_PARTITION_NAME = "db.milvus.insert.partition_name"
@@ -185,10 +192,15 @@ class SpanAttributes:
     MILVUS_SEARCH_PARTITION_NAMES_COUNT = "db.milvus.search.partition_names_count"
     MILVUS_SEARCH_SEARCH_PARAMS = "db.milvus.search.search_params"
     MILVUS_SEARCH_TIMEOUT = "db.milvus.search.timeout"
+    MILVUS_SEARCH_PARTITION_NAMES = "db.milvus.search.partition_names"
+    MILVUS_SEARCH_RESULT_COUNT = "db.milvus.search.result_count"
+    MILVUS_SEARCH_QUERY_VECTOR_DIMENSION = "db.milvus.search.query_vector_dimension"
+    MILVUS_SEARCH_ANNSEARCH_REQUEST = "db.milvus.search.annsearch_request"
+    MILVUS_SEARCH_RANKER_TYPE = "db.milvus.search.ranker_type"
     MILVUS_UPSERT_COLLECTION_NAME = "db.milvus.upsert.collection_name"
     MILVUS_UPSERT_DATA_COUNT = "db.milvus.upsert.data_count"
     MILVUS_UPSERT_PARTITION_NAME = "db.milvus.upsert.partition_name"
-    MILVUS_UPSERT_TIMEOUT_COUNT = "db.milvus.upsert.timeout_count"
+    MILVUS_UPSERT_TIMEOUT = "db.milvus.upsert.timeout"
 
     # Qdrant
     QDRANT_SEARCH_COLLECTION_NAME = "qdrant.search.collection_name"
@@ -204,10 +216,19 @@ class SpanAttributes:
     MARQO_SEARCH_PROCESSING_TIME = "db.marqo.search.processing_time"
     MARQO_DELETE_DOCUMENTS_STATUS = "db.marqo.delete_documents.status"
 
+    # MCP
+    MCP_METHOD_NAME = "mcp.method.name"
+    MCP_REQUEST_ARGUMENT = "mcp.request.argument"
+    MCP_REQUEST_ID = "mcp.request.id"
+    MCP_SESSION_INIT_OPTIONS = "mcp.session.init_options"
+    MCP_RESPONSE_VALUE = "mcp.response.value"
+
 
 class Events(Enum):
     DB_QUERY_EMBEDDINGS = "db.query.embeddings"
     DB_QUERY_RESULT = "db.query.result"
+    DB_SEARCH_EMBEDDINGS = "db.search.embeddings"
+    DB_SEARCH_RESULT = "db.search.result"
 
 
 class EventAttributes(Enum):
@@ -221,6 +242,15 @@ class EventAttributes(Enum):
     DB_QUERY_RESULT_METADATA = "db.query.result.metadata"
     DB_QUERY_RESULT_VECTOR = "db.query.result.vector"
     DB_QUERY_RESULT_DOCUMENT = "db.query.result.document"
+
+    # SEARCH
+    DB_SEARCH_EMBEDDINGS_VECTOR = "db.search.embeddings.vector"
+
+    DB_SEARCH_RESULT_QUERY_ID = "db.search.query.id"  # For multi-vector searches
+    DB_SEARCH_RESULT_ID = "db.search.result.id"
+    DB_SEARCH_RESULT_SCORE = "db.search.result.score"
+    DB_SEARCH_RESULT_DISTANCE = "db.search.result.distance"
+    DB_SEARCH_RESULT_ENTITY = "db.search.result.entity"
 
 
 class LLMRequestTypeValues(Enum):
